@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { RiPhoneFindLine } from "react-icons/ri";
 import { FilterContainer, Input, FilterTitle } from "./Filter.styled";
 
-export default function Filter({ value, onChangeFilter }) {
+export default function Filter({ value, onChange }) {
   return (
     <FilterContainer>
       <FilterTitle>
@@ -13,7 +13,7 @@ export default function Filter({ value, onChangeFilter }) {
       <Input
         type='text'
         value={value}
-        onChange={(e) => onChangeFilter(e.target.value)}
+        onChange={onChange}
         placeholder='enter name'
       />
     </FilterContainer>
