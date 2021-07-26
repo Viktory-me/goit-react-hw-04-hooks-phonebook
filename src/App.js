@@ -37,8 +37,9 @@ function App() {
       name,
       number,
     };
-
-    setContacts([newContact, ...contacts]);
+    contacts.find((contact) => contact.name === name)
+      ? alert(`${name} is already in contacts.`)
+      : setContacts([newContact, ...contacts]);
   };
 
   const getVisibleContacts = () => {
